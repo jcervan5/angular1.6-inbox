@@ -9,9 +9,9 @@
       vm.messages = data;
     }
 
-    vm.markDone = function(message){
-      console.log(message);
-
+    vm.toggleStar = function(message) {
+      message.starred = !message.starred;
+        console.log(message)
     }
 
   })

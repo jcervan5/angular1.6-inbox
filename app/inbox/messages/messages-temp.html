@@ -9,8 +9,14 @@ ng-class="{
         <input type="checkbox"
         ng-model="selected">
       </div>
-      <div class="col-xs-2" ng-click="$ctrl.markDone(message)">
-        <i class="star fa fa-star-o"></i>
+
+      <div class="col-xs-2">
+        <i
+        ng-click="$ctrl.toggleStar(message)"
+        ng-class="{
+        'fa fa-star': message.starred ,
+        'fa fa-star-o': !message.starred
+        }"></i>
       </div>
     </div>
   </div>

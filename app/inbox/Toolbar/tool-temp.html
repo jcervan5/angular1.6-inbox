@@ -1,30 +1,38 @@
 <div class="row toolbar">
   <div class="col-md-12">
     <p class="pull-right">
-      <span class="badge badge">2</span>
+      <span class="badge badge">{{$ctrl.countUnreadMessages($ctrl.toolbarbinding)}}</span>
       unread messages
     </p>
 
-    <a class="btn btn-danger">
-      <i class="fa fa-plus"></i>
-    </a>
-
     <button class="btn btn-default">
-      <i class="fa fa-minus-square-o"></i>
+      <i
+      ng-click="$ctrl.changeSelect($ctrl.toolbarbinding)"
+      ng-class="{
+        'fa fa-check-square-o':$ctrl.allSelected($ctrl.toolbarbinding),
+        'fa fa-square-o':$ctrl.allNotSelected($ctrl.toolbarbinding),
+        'fa fa-minus-square-o':$ctrl.someSelected($ctrl.toolbarbinding)
+      }"></i>
     </button>
 
-    <button class="btn btn-default">Mark As Read</button>
+    <button class="btn btn-default"
+    ng-click="$ctrl.markAsRead($ctrl.toolbarbinding)">Mark As Read</button>
 
-    <button class="btn btn-default">Mark As Unread</button>
+    <button class="btn btn-default"
+    ng-click="$ctrl.markAsUnRead($ctrl.toolbarbinding)">Mark As Unread</button>
 
-    <select class="form-control label-select">
+    <select class="form-control label-select"
+        ng-model="selectedLabel"
+        ng-change="$ctrl.addLabel($ctrl.toolbarbinding, selectedLabel)">
       <option>Apply label</option>
       <option value="dev">dev</option>
       <option value="personal">personal</option>
       <option value="gschool">gschool</option>
     </select>
 
-    <select class="form-control label-select">
+    <select class="form-control label-select"
+        ng-model="selectedRemoveLabel"
+        ng-change="$ctrl.removeLabel($ctrl.toolbarbinding, selectedRemoveLabel)">
       <option>Remove label</option>
       <option value="dev">dev</option>
       <option value="personal">personal</option>
@@ -32,7 +40,8 @@
     </select>
 
     <button class="btn btn-default">
-      <i class="fa fa-trash-o"></i>
+      <i class="fa fa-trash-o"
+      ng-click="$ctrl.deleteMessage($ctrl.toolbarbinding)"></i>
     </button>
   </div>
 </div>

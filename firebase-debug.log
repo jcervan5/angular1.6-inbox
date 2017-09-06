@@ -1,0 +1,31 @@
+[debug] [2017-08-31T21:30:05.709Z] ----------------------------------------------------------------------
+[debug] [2017-08-31T21:30:05.711Z] Command:      /usr/local/Cellar/node/8.2.1/bin/node /usr/local/bin/firebase deploy
+[debug] [2017-08-31T21:30:05.711Z] CLI Version:  3.9.1
+[debug] [2017-08-31T21:30:05.711Z] Platform:     darwin
+[debug] [2017-08-31T21:30:05.711Z] Node Version: v8.2.1
+[debug] [2017-08-31T21:30:05.712Z] Time:         Thu Aug 31 2017 15:30:05 GMT-0600 (MDT)
+[debug] [2017-08-31T21:30:05.712Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-08-31T21:30:05.726Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-08-31T21:30:05.726Z] > authorizing via signed-in user
+[debug] [2017-08-31T21:30:05.728Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-08-31T21:30:05.728Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/aTkAysQI9Xa5rijjykgK3HaOe1QmbwOSrYG3USKIbc4',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Aug 31 2017 15:30:05 GMT-0600 (MDT)
+[debug] [2017-08-31T21:30:06.014Z] <<< HTTP RESPONSE 200
+[debug] [2017-08-31T21:30:06.025Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/angular-inbox-d0f16  
+ Thu Aug 31 2017 15:30:06 GMT-0600 (MDT)
+[debug] [2017-08-31T21:30:06.390Z] <<< HTTP RESPONSE 200
+[debug] [2017-08-31T21:30:06.391Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/angular-inbox-d0f16/tokens  
+ Thu Aug 31 2017 15:30:06 GMT-0600 (MDT)
+[debug] [2017-08-31T21:30:06.687Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'angular-inbox-d0f16'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing ./ directory for upload...
+[debug] [2017-08-31T21:30:07.905Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/angular-inbox-d0f16/uploads/-KsuBsCfQcE06qC7mwuQ?fileCount=94&message=  
+ Thu Aug 31 2017 15:30:07 GMT-0600 (MDT)

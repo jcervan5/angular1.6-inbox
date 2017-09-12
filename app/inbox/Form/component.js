@@ -5,7 +5,8 @@
     controller:'formController',
     templateUrl:'app/inbox/Form/form-temp.html',
     bindings: {
-      msgbinding: '<'
+      msgbinding: '<',
+      hidefrm: '<'
     }
   })
 }());

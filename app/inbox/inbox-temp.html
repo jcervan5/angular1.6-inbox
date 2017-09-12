@@ -1,8 +1,6 @@
 <main class="container">
-  <ngtoolbar toolbarbinding = "$ctrl.messages"></ngtoolbar>
-  <!-- <br></br>
-  <ngform> </ngform>
-  <br></br>
-  <ngmessages></ngmessages> -->
+  <ngtoolbar toolbarbinding = "$ctrl.messages" showform="ctrl.showForm"></ngtoolbar>
+  <ngform   msgbinding=$ctrl.messages hidefrm="$ctrl.showForm" ng-hide="$ctrl.showForm.flag"></ngform>
+  <ngmessages></ngmessages>
   <messageslist msgbinding = "$ctrl.messages"></messageslist>
 </main>

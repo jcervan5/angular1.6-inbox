@@ -3,8 +3,8 @@
   angular
   .module('angular1.6-inbox')
   .controller('messagesListController', messagesListController)
-  function messagesListController(){
-
+  function messagesListController($http){
+    const vm=this
     console.log('messagesList');
   }
 }());
